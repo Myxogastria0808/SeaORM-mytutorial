@@ -1,0 +1,14 @@
+[package]
+name = "axum-seaorm-mytutorial"
+version = "0.1.0"
+edition = "2021"
+
+
+[workspace]
+members = [".", "entity", "migration"]
+
+[dependencies]
+entity = { path = "entity" }
+migration = { path = "migration" }
+sea-orm = { version = "^0.12.0", features = [ "sqlx-postgres", "runtime-tokio-native-tls", "macros" ] }
+tokio = {version = "1.39.2", features = ["full"] }
